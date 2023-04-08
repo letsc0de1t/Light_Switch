@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        :root{
+            --on:none;
+            --off:block;
+        }
+        body{
+            display: flex;
+            background-color: #222;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            height: 300px;
+            width: 150px;
+        }
+        #on{
+            display: var(--on);
+        }
+        #off{
+            display: var(--off);
+        }
+        button:active{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+  <img src="on.png" alt="" id="on">
+  <img src="off.png" alt="" id="off">
+  <div>
+    <button onclick="on()">On</button>
+    <button onclick="off()">Off</button>
+  </div>
+  <script>
+    const on=()=>{
+        document.documentElement.
+        style.setProperty("--on","block");
+        document.documentElement.
+        style.setProperty("--off","none");
+    }
+    const off=()=>{
+        document.documentElement.
+        style.setProperty("--off","block");
+        document.documentElement.
+        style.setProperty("--on","none");
+    }
+  </script>
+</body>
+</html>
